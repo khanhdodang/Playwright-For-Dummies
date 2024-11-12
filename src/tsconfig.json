@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "es2022", // or any other version you prefer
+        "module": "commonjs",
+        "lib": [
+            "es2022",
+            "dom"
+        ], // Ensure 'dom' is included
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true
+    }
+}

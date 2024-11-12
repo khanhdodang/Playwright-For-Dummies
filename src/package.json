@@ -1,0 +1,27 @@
+{
+  "name": "playwright-tutorials",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test-ui": "npx playwright test --ui",
+    "firefox": "npx playwright test --project firefox",
+    "webkit": "npx playwright test --project webkit",
+    "chrome": "npx playwright test --project chromium",
+    "show-report": "npx playwright show-report",
+    "allure-report": "allure generate allure-results -o allure-report --clean",
+    "open-allure-report": "npm run allure-report && allure open allure-report"
+  },
+  "keywords": [],
+  "author": "Khanh Do",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.38.0",
+    "@types/node": "^20.6.3",
+    "allure-playwright": "^2.8.1",
+    "csv-parse": "^5.5.0",
+    "dotenv": "^16.3.1",
+    "rimraf": "^5.0.1"
+  }
+}
