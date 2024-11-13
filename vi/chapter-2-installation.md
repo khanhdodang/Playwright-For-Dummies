@@ -162,3 +162,12 @@ yarn playwright --version
 ```bash
 pnpm exec playwright --version
 ```
+
+### Tham khảo
+
+- [Installing Playwright](https://playwright.dev/docs/intro#installing-playwright)
+- [What's Installed](https://playwright.dev/docs/intro#whats-installed)
+- [Running the Example Test](https://playwright.dev/docs/intro#running-the-example-test)
+- [HTML Test Reports](https://playwright.dev/docs/intro#html-test-reports)
+- [Running the Example Test in UI Mode](https://playwright.dev/docs/intro#running-the-example-test-in-ui-mode)
+- [Updating Playwright](https://playwright.dev/docs/intro#updating-playwright)
