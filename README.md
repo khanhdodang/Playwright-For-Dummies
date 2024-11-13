@@ -6,12 +6,6 @@
 
 Tài liệu được viết theo trình tự từ cơ bản đến nâng cao, giúp người đọc từng bước nắm vững Playwright. Các ví dụ mã nguồn và hướng dẫn thực hành cụ thể sẽ giúp người đọc dễ dàng áp dụng vào dự án thực tế.
 
-### Yêu Cầu Hệ Thống
-
-- **Node.js** phiên bản 12 trở lên.
-- **Trình duyệt hỗ trợ**: Chrome, Firefox, và WebKit (có thể chạy không cần giao diện).
-- **Công cụ CI/CD tùy chọn**: Jenkins, GitHub Actions, GitLab CI/CD, v.v.
-
 Chúng tôi hy vọng **Playwright For Dummies** sẽ là tài liệu hữu ích giúp bạn nhanh chóng làm chủ Playwright và áp dụng vào công việc kiểm thử của mình một cách hiệu quả. Chúc bạn thành công!
 
 --- 
