@@ -1,0 +1,79 @@
+name: Playwright Tests
+
+trigger:
+- $(branch)
+
+schedules:
+- cron: '0 0 * * *'
+  displayName: Daily midnight build
+  branches:
+    include:
+    - $(branch)
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '21.x'
+  displayName: 'Install Node.js'
+
+- task: DownloadSecureFile@1
+  name: dotenvSettings
+  displayName: 'Download DOTENV settings'
+  inputs:
+    secureFile: '.env'
+ 
+- task: CopyFiles@2
+  displayName: 'Copy DOTENV settings'
+  inputs:
+    SourceFolder: '$(Agent.TempDirectory)'
+    Contents: .env
+    TargetFolder: '$(Build.SourcesDirectory)'
+
+- script: |
+    npm install
+  displayName: 'npm Install NPM packages'
+
+- script: |
+    npx playwright install --with-deps
+  displayName: 'Install Playwright browsers and dependencies'
+
+- script: |
+    npm install -g allure-commandline --save-dev
+  displayName: 'Install Allure Commandline'
+
+- script: |
+    set CI=true && npx playwright test $(spec) --project=chromium
+  displayName: 'Run Playwright tests'
+
+- script: |
+    allure generate allure-results -o allure-report --clean
+  displayName: 'Generate Allure Reports'
+  condition: always()
+
+- publish: allure-report
+  artifact: allure-report
+  condition: always()
+
+- publish: playwright-report
+  artifact: playwright-report
+  condition: always()
+
+- publish: data
+  artifact: data
+  condition: always()
+ 
+- publish: output
+  artifact: output
+  condition: always()
+
+- task: PublishTestResults@2
+
+  inputs:
+    testRunner: 'JUnit'
+    testResultsFiles: 'test-results/results.xml'
+    testRunTitle: 'Playwright Report'
+    publishRunAttachments: true
+  condition: always()
