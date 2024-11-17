@@ -11,3 +11,6 @@ Chúng tôi hy vọng **Playwright For Dummies** sẽ là tài liệu hữu ích
 --- 
 
 > Tài liệu này là nguồn tham khảo miễn phí, vui lòng tham khảo hướng dẫn và tài liệu chính thức của Playwright tại [Playwright Documentation](https://playwright.dev) để cập nhật các tính năng và phiên bản mới nhất.
+
+---
+<a href="https://www.buymeacoffee.com/khanhdodang" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
