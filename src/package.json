@@ -17,7 +17,7 @@
   "author": "Khanh Do",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.38.0",
+    "@playwright/test": "^1.56.1",
     "@types/node": "^20.6.3",
     "allure-playwright": "^2.8.1",
     "csv-parse": "^5.5.0",
